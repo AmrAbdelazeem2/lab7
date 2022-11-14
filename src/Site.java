@@ -1,5 +1,5 @@
-public class Site {
-    protected static final double TAX_RATE = 0;
+public abstract class Site {
+    protected static final double TAX_RATE = 10;
     private double BaseAmount;
     private double TaxAmount;
     public Site() {
@@ -10,11 +10,7 @@ public class Site {
         return getBaseAmount() + getTaxAmount();
     }
 
-    public double getBaseAmount() {
-        return BaseAmount;
-    }
+    public abstract double getBaseAmount();
 
-    public double getTaxAmount() {
-        return TaxAmount;
-    }
+    public abstract double getTaxAmount();
 }
